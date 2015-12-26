@@ -1,0 +1,20 @@
+{
+  "eventName": "gardenNotification",
+  "url": "https://3qa0mloqf9.execute-api.us-east-1.amazonaws.com/production",
+  "requestType": "POST",
+  "headers": {
+    "x-api-key":"I7JkpQMf8l2OWgOUiIKbB291SMCwDqfF8mRH1FnF"
+	},
+  
+   "json":
+	  {
+	  "errCode": "{{eC}}",
+	  "humidity": "{{hum}}",
+	  "lastWateredT": "{{lWT}}",
+	  "light": "{{li}}",
+	  "nextWateringT": "{{nWT}}",
+	  "status":"{{stat}}"
+	  
+	}
+	
+}

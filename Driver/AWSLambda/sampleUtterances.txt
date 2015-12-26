@@ -1,0 +1,30 @@
+DoActionIntent {Action}
+
+AskTempIntent what is the temperature
+AskTempIntent get the temperature
+
+AskLightIntent get the brightness of {LightAt}
+AskLightIntent get the brightness of the {LightAt}
+AskLightIntent get the brightness level for {LightAt}
+AskLightIntent get the brightness level for the {LightAt}
+AskLightIntent what's the brightness for {LightAt}
+AskLightIntent what's the brightness for the {LightAt}
+AskLightIntent how bright is {LightAt}
+AskLightIntent how bright are {LightAt}
+AskLightIntent get all brightness levels
+
+
+AskWaterIntent what's the water level of {WaterAt} 
+AskWaterIntent what's the water level of the {WaterAt}
+AskWaterIntent get the water level of {WaterAt}
+AskWaterIntent get the water level of the {WaterAt}
+AskWaterIntent when is the next watering cycle
+AskWaterIntent when is the next watering cycle scheduled
+AskWaterIntent when was the last watering cycle
+AskWaterIntent when was the last time you watered
+AskWaterIntent when was the last time you watered the plants
+
+AskErrorCount get error count
+AskErrorList get error list
+AskErrorReset reset errors
+AskErrorReset clear errors

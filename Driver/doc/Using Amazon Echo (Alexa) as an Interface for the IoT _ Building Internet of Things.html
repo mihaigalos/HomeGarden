@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/ -->
+<html lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://blog.buildinginternetofthings.com/xmlrpc.php">
+<title>Using Amazon Echo (Alexa) as an Interface for the IoT | Building Internet of Things</title>
+<link rel="alternate" type="application/rss+xml" title="Building Internet of Things » Feed" href="http://blog.buildinginternetofthings.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Building Internet of Things » Comments Feed" href="http://blog.buildinginternetofthings.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Building Internet of Things » Using Amazon Echo (Alexa) as an Interface for the IoT Comments Feed" href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/feed/">
+		<script src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/ga.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blog.buildinginternetofthings.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/wp-emoji-release.min.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-polls-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/polls-css.css" type="text/css" media="all">
+<style id="wp-polls-inline-css" type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://blog.buildinginternetofthings.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel="stylesheet" id="YoutubeShortcodeMargenn-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/youtube-shortcode.css" type="text/css" media="all">
+<link rel="stylesheet" id="catchbox-style-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="shCore-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/shCore.css" type="text/css" media="all">
+<link rel="stylesheet" id="shCoreDefault-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/shCoreDefault.css" type="text/css" media="all">
+<link rel="stylesheet" id="shThemeDefault-css" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/shThemeDefault.css" type="text/css" media="all">
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/jquery.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/external-tracking.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.buildinginternetofthings.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.buildinginternetofthings.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="VIPER: A cross-platform IoT design framework" href="http://blog.buildinginternetofthings.com/2015/03/16/viper-a-cross-platform-iot-design-framework/">
+<link rel="next" title="A social-dancing Robot with Arduino and MQTT" href="http://blog.buildinginternetofthings.com/2015/07/05/a-social-dancing-robot-with-arduino-and-mqtt/">
+<meta name="generator" content="WordPress 4.3.1">
+<link rel="canonical" href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things.html">
+<link rel="shortlink" href="http://blog.buildinginternetofthings.com/?p=1142">
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-31820459-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="single single-post postid-1142 single-format-standard single-author right-sidebar">
+
+
+<div id="page" class="hfeed site">
+
+	 
+    
+	<header id="branding" role="banner">
+
+    	            
+    	<div id="header-content" class="clearfix">
+        
+			<div class="logo-wrap clearfix">    
+    	<div id="site-logo">
+        	<a href="http://blog.buildinginternetofthings.com/" title="Building Internet of Things" rel="home">
+                <img src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/header5.png" width="1075" height="200" alt="Building Internet of Things">
+            </a>
+      	</div>
+        
+	<div id="hgroup" class="site-details with-logo"> 
+   		<h1 id="site-title"><a href="http://blog.buildinginternetofthings.com/" title="Building Internet of Things" rel="home">Building Internet of Things</a></h1>
+       	<h2 id="site-description">with open hardware</h2>
+   	</div><!-- #hgroup -->   
+
+</div><!-- .logo-wrap -->	<form method="get" class="searchform" action="http://blog.buildinginternetofthings.com/">
+        <label for="s" class="assistive-text">Search</label>
+        <input type="text" class="field" name="s" id="s" placeholder="Search">
+        <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+            
+		</div><!-- #header-content -->
+        
+    		<nav id="access" role="navigation">
+		<h3 class="assistive-text">Primary menu</h3>
+				<div class="skip-link"><a class="assistive-text" href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#content" title="Skip to primary content">Skip to primary content</a></div>
+		<div class="skip-link"><a class="assistive-text" href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#secondary" title="Skip to secondary content">Skip to secondary content</a></div>
+			
+		<div class="menu-header-container"><ul class="menu l_tinynav1"><li><a href="http://blog.buildinginternetofthings.com/">Home</a></li><li class="page_item page-item-2"><a href="http://blog.buildinginternetofthings.com/sample-page/">About</a></li><li class="page_item page-item-584"><a href="http://blog.buildinginternetofthings.com/building-internet-of-things/">Building Internet of Things</a></li></ul><select id="tinynav1" class="tinynav tinynav1"><option value="http://blog.buildinginternetofthings.com/">Home</option><option value="http://blog.buildinginternetofthings.com/sample-page/">About</option><option value="http://blog.buildinginternetofthings.com/building-internet-of-things/" selected="selected">Building Internet of Things</option></select>
+</div> 		
+			   
+		</nav><!-- #access -->
+		
+	           
+                
+	</header><!-- #branding -->
+    
+	    
+
+	        
+	<div id="main" class="clearfix">
+
+		        
+		<div id="primary">
+        
+			        
+			<div id="content" role="main">
+				
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://blog.buildinginternetofthings.com/2015/03/16/viper-a-cross-platform-iot-design-framework/" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="http://blog.buildinginternetofthings.com/2015/07/05/a-social-dancing-robot-with-arduino-and-mqtt/" rel="next">Next <span class="meta-nav">→</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1142" class="post-1142 post type-post status-publish format-standard hentry category-iot">
+	<header class="entry-header">
+		<h1 class="entry-title">Using Amazon Echo (Alexa) as an Interface for the IoT</h1>
+
+		            <div class="entry-meta">
+                <span class="sep">Posted on </span><a href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things.html" title="4:00 pm" rel="bookmark"><time class="entry-date updated" datetime="2015-06-25T16:00:14+00:00" pubdate="">June 25, 2015</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://blog.buildinginternetofthings.com/author/admin/" title="View all posts by Charalampos" rel="author">Charalampos</a></span></span>                                    <span class="sep sep-comment"> — </span>
+                    <span class="comments-link">
+                        <a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#comments">1 Comment ↓</a>                    </span>
+                            </div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>The <a href="http://www.amazon.com/Amazon-SK705DI-Echo/dp/B00X4WHP5E" target="_blank">Amazon Echo</a> device has just been made available for pre-orders in the US. For those not familiar with it, Echo is a device that interacts with users verbally and can “provide information, answer questions, play music, read the news, check sports scores or the weather, and more..”.</p>
+<p><img class="alignnone" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Amazon-Echo2.jpg" alt="" width="349" height="199"></p>
+<p>While its primary purpose it to assist (or promote) interaction&nbsp;with Amazon services (music, orders, etc.) it can also be used as an interface for controlling IoT devices. By default it can control your <a href="http://www2.meethue.com/" target="_blank">Philips Hue</a> lights and <a href="http://www.belkin.com/us/Products/home-automation/c/wemo-home-automation/" target="_blank">Belkin Wemo</a> switches. Probably integration with more home-automation devices is on the way.</p>
+<p>However, since there is a <a href="https://developer.amazon.com/appsandservices/community/post/Tx1HI1N5ZFX0PEK/Sign-up-Now-for-the-Amazon-Echo-Beta-SDK" target="_blank">SDK</a> available for developer’s it’s quite possible to use Alexa (the voice and ‘AI’ of Echo) to develop your own apps that communicate with your devices. There are quite a few examples online that show people using Alexa to control for example some SmartThings devices.</p>
+<p>I started experimenting with the SDK recently and I am sharing here an example on how to use Alexa to communicate with a <a href="https://www.particle.io/" target="_blank">Particle</a> device (ex Spark core).</p>
+<p><strong>Objective</strong>: Use Alexa to ask about&nbsp;sensor information collected from a Particle / ask Alexa to deliver an actuation command on a Particle (e.g., turn off a switch)</p>
+<p><a href="http://blog.buildinginternetofthings.com/wp-content/uploads/2015/06/Presentation1.jpg"><img class="alignnone size-medium wp-image-1154" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Presentation1-300x225.jpg" alt="concept" width="300" height="225"></a></p>
+<p><strong>How developing for Amazon Echo works:</strong>&nbsp;Though it’s been referred to as Echo SDK, it’s more of an API, since your application needs to be hosted on the Internet and accessed through HTTPS as a web service. Your app is registered through the <a href="https://developer.amazon.com/edw/home.html" target="_blank">Amazon Developer</a>&nbsp;portal as an Echo app where you indicate the app’s name, the&nbsp;Spoken Name (the name user’s will use to launch your app by saying e.g., ‘Alexa open -app name-‘), the URL of your application endpoint (HTTPS or <a href="https://aws.amazon.com/lambda/" target="_blank">Amazon Lambda</a> endpoint) and the <strong><em>Interaction Model</em></strong>. The Interaction model basically indicates how your app interacts with Alexa: – the Schema that contains <em>Intents</em> (think of them as tasks for Alexa) and the input parameters your users will&nbsp;say to Alexa during app execution and – the Sample Utterances, which contain&nbsp;phrases a user might say that correspond to the various Intents (e.g., turn off the switch, turn the switch off, set temperature to {high|temperature}, set temperature to {low|temperature}, etc.)</p>
+<p>Here are the steps to create an Amazon Echo app (update: Looks like Amazon Echo apps are now called Alexa Skills) that communicates with a Particle device:</p>
+<p>a) First you need to create the <strong>endpoint of your app</strong>. It can be hosted under your custom server environment (but remember you need to enable HTTPS – even a self-signed certificate can do for testing your app) or you can create an Amazon Lambda function and host it under AWS. Currently you can create Echo apps using either Java or Node.JS. For simplicity I chose to create the endpoint using an <em>Amazon Lambda function</em>.</p>
+<p>Choosing ‘Alexa Appkit &nbsp;Colors (Preview)’ from Code template gives you with a code template to work on that features already the main functions Alexa needs to interact with your app. Remember to select ‘Basic Execution Role’ under Role options.</p>
+<p><a href="http://blog.buildinginternetofthings.com/wp-content/uploads/2015/06/Screen-Shot-2015-06-25-at-2.34.24-PM.png"><img class="alignnone size-medium wp-image-1144" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Screen-Shot-2015-06-25-at-2.34.24-PM-300x261.png" alt="Screen Shot 2015-06-25 at 2.34.24 PM" width="300" height="261"></a></p>
+<p>Before editing your Lambda function and adding your code, remember to <strong>add Event Source</strong>: Click the Actions button -&gt; ‘Add event source’ and from the ‘Event Source type’ select ‘Alexa AppKit (Preview). This step is crucial, without it your Echo device won’t be able to execute your app.</p>
+<p>Your Amazon Lambda function is ready to be used and has its own endpoint, for example:</p>
+<p class="p1"><span class="s1">arn:aws:lambda:us-east-1:51XYXYXYXY50:function:AmazonEchoParticle</span></p>
+<p class="p1">Click on your function’s name to Edit it. Have a look through the code template. What happens here is that when user&nbsp;invokes your app by saying ‘Alexa open appname’, Echo&nbsp;executes the ‘onLaunch’ function. When user&nbsp;asks something from Alexa or gives a command,&nbsp;that corresponds to an Intent. Based on phrases that a user might say (and that you have predefined when registering your Echo app – step b), the&nbsp;functio&nbsp;
+</p><div><div id="highlighter_463314" class="syntaxhighlighter  php"><div class="toolbar"><span><a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php keyword">function</code> <code class="php plain">onIntent(intentRequest, session, callback)</code></div></div></td></tr></tbody></table></div></div>
+<p> is invoked with the requested&nbsp;Intent detected as first&nbsp;input parameter.</p>
+<p class="p1">To have Alexa say something to the user you use the function:&nbsp;
+</p><div><div id="highlighter_568593" class="syntaxhighlighter  php"><div class="toolbar"><span><a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php keyword">function</code> <code class="php plain">buildSpeechletResponse(title, output, repromptText, shouldEndSession)</code></div></div></td></tr></tbody></table></div></div>
+<p></p>
+<p class="p1">where you also specify whether the session (app) should be ended, or Alexa should wait for some new input from the user.</p>
+<p class="p1">In the case of the Particle device, I have created two Intents for use: one for asking the temperature from an attached temperature analog sensor, and one for controlling a digital pin.</p>
+<p class="p1">The communication with the Particle is done through the <a href="https://www.particle.io/prototype#cloud" target="_blank">Particle Cloud</a>. The Particle Cloud exposes an API you can use for controlling or reading data from your device anywhere. You can use it invoke functions on the Particle or read a variable name&nbsp;(e.g., the temperature calculated in Celcius from&nbsp;an analog temperature sensor) or you can directly read data from and set the state of (digital) pins.</p>
+<p class="p1">You can find the <strong>complete code</strong> for the Echo Lambda function <a href="https://github.com/hdoukas/AmazonEchoParticle" target="_blank">here</a>.</p>
+<p>b) Register your Amazon Echo to the Amazon Developer’s portal. Under APPS &amp; SERVICES -&gt; Alexa, you add a new App (now called Skill). Give it a name, and an invocation name. I used ‘particle’ for this example. Add the endpoint (Lambda ID) and click Next to define the Intent Schema and the Sample Utterances.</p>
+<p>Since the app has two Intents (‘AskTempIntent’ for getting the temperature and ‘ControlPinIntent’ for setting the digital pin to 0/1) you need an Internet Schema like the following:</p>
+<div><div id="highlighter_773741" class="syntaxhighlighter  php"><div class="toolbar"><span><a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">{</code></div><div class="line number2 index1 alt1"><code class="php string">"intents"</code><code class="php plain">: [</code></div><div class="line number3 index2 alt2"><code class="php plain">{</code></div><div class="line number4 index3 alt1"><code class="php string">"intent"</code><code class="php plain">: </code><code class="php string">"ControlPinIntent"</code><code class="php plain">,</code></div><div class="line number5 index4 alt2"><code class="php string">"slots"</code><code class="php plain">: [</code></div><div class="line number6 index5 alt1"><code class="php plain">{</code></div><div class="line number7 index6 alt2"><code class="php string">"name"</code><code class="php plain">: </code><code class="php string">"Pin"</code><code class="php plain">,</code></div><div class="line number8 index7 alt1"><code class="php string">"type"</code><code class="php plain">: </code><code class="php string">"LITERAL"</code></div><div class="line number9 index8 alt2"><code class="php plain">}</code></div><div class="line number10 index9 alt1"><code class="php plain">]</code></div><div class="line number11 index10 alt2"><code class="php plain">},</code></div><div class="line number12 index11 alt1"><code class="php plain">{</code></div><div class="line number13 index12 alt2"><code class="php string">"intent"</code><code class="php plain">: </code><code class="php string">"AskTempIntent"</code><code class="php plain">,</code></div><div class="line number14 index13 alt1"><code class="php string">"slots"</code><code class="php plain">: []</code></div><div class="line number15 index14 alt2"><code class="php plain">}</code></div><div class="line number16 index15 alt1"><code class="php plain">]</code></div><div class="line number17 index16 alt2"><code class="php plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>Note that the ControlPinIntent has an input slot (variable) named ‘Pin’.</p>
+<p>For the Sample Utterances you need to define possible phrases the user will use to interact with Alexa for this app:</p>
+<div><div id="highlighter_461749" class="syntaxhighlighter  php"><div class="toolbar"><span><a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">ControlPinIntent set pin to {zero|Pin}</code></div><div class="line number2 index1 alt1"><code class="php plain">ControlPinIntent set pin to {one|Pin}</code></div><div class="line number3 index2 alt2"><code class="php plain">ControlPinIntent set the pin to {zero|Pin}</code></div><div class="line number4 index3 alt1"><code class="php plain">ControlPinIntent set the pin to {one|Pin}</code></div><div class="line number5 index4 alt2"><code class="php plain">ControlPinIntent put the pin to {zero|Pin}</code></div><div class="line number6 index5 alt1"><code class="php plain">ControlPinIntent put the pin to {one|Pin}</code></div><div class="line number7 index6 alt2"><code class="php plain">AskTempIntent what is the temperature</code></div><div class="line number8 index7 alt1"><code class="php plain">AskTempIntent tell me the temperature</code></div><div class="line number9 index8 alt2"><code class="php plain">AskTempIntent temperature</code></div><div class="line number10 index9 alt1"><code class="php plain">AskTempIntent temperature sensor</code></div></div></td></tr></tbody></table></div></div>
+<p>c) Last but not least, upload the code to your Particle that will expose the temperature reading though the Cloud API and also let you control a digital pin remotely. Here you need two things mainly, a) register inside <strong>setup()</strong> the temperature variable so it can be exposed through the API:</p>
+<p><span class="unknown">Spark.</span><span class="me0">variable</span><span class="br0">(</span><span class="st1">“temperature”</span><span class="unknown">, &amp;temperature, INT</span><span class="br0">)</span><span class="unknown">;</span></p>
+<p>b) register the function that controls the digital pin over the API:</p>
+<p><span class="unknown">Spark.</span><span class="de1">function</span><span class="br0">(</span><span class="st1">“relay”</span><span class="unknown">, pinControl</span><span class="br0">)</span><span class="unknown">;</span></p>
+<p>and the code of the pinControl function looks like:</p>
+<p><span class="kw1">int</span>&nbsp;pin<span class="de1">Control</span><span class="br0">(</span><span class="unknown">String command</span><span class="br0">)&nbsp;</span><span class="br0">{</span></p>
+<p>// Get state</p>
+<p><span class="kw1">int</span><span class="unknown"> state = command.</span><span class="me0">toInt</span><span class="br0">(</span><span class="br0">)</span><span class="unknown">;</span></p>
+<p><span class="de1">digitalWrite</span><span class="br0">(</span><span class="unknown">relay_pin,state</span><span class="br0">)</span><span class="unknown">;</span></p>
+<p><span class="kw1">return</span> <span class="nu0">1</span><span class="unknown">;</span></p>
+<p><span class="br0">}</span></p>
+<p>You will need your DeviceID and your Access Token in order to be able to access the Particle Cloud API.</p>
+<p>Once having setup everything and flashed your Particle, you should be able to use the app on Alexa and interact with the Particle: Invoke the app by saying&nbsp;‘<strong>Alex open particle</strong>‘.&nbsp;After the welcome message, you can ask: ‘<strong>Alexa, what is the temperature?</strong>‘ or ‘<strong>Alexa, set pin to 1</strong>‘ to see the blue LED on the Particle light up <img src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+<p>&nbsp;</p>
+<p>Here is a video demonstrating the project, by telling Alexa to turn on and off (set pin to 1 and then to 0) the on-board LED of the particle device</p>
+<p class="youtube_sc  fluid widescreen"><span class="inner block"><noscript>&lt;style type="text/css"&gt;.youtube_sc iframe.yp{display:none;}&lt;/style&gt;&lt;object width="560" height="340" class="yp" title="YouTube video player"&gt;&lt;param name="movie" value="http://www.youtube.com/v/7lITbRB1vNQ?version=3&amp;amp;hl=de_DE"&gt;&lt;param name="allowscriptaccess" value="always"&gt;&lt;param name="wmode" value="transparent"&gt;&lt;embed src="http://www.youtube.com/v/7lITbRB1vNQ?version=3&amp;amp;hl=de_DE" width="560" height="340" class="yp" type="application/x-shockwave-flash" wmode="transparent" allowscriptaccess="always"&gt;&lt;span style="display:block;margin-top:15px;"&gt;The Adobe Flash Player is required for video playback.&lt;br&gt;&lt;a href="http://get.adobe.com/flashplayer/" title="Install from Adobe"&gt;Get the latest Flash Player&lt;/a&gt; or &lt;a href="http://www.youtube.com/watch?v=7lITbRB1vNQ" target="_blank" title="Watch on YouTube"&gt;Watch this video on YouTube&lt;/a&gt;.&lt;/span&gt;&lt;/object&gt;</noscript><iframe src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/7lITbRB1vNQ.html" width="560" height="340" class="yp" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe></span></p>
+<iframe src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/like.html" id="fbLikeIframe" name="fbLikeIframe" scrolling="no" frameborder="0" allowtransparency="true" class="fbLikeContainer" style="border:none; overflow:hidden; width:300px; height:25px; display:inline;"></iframe><div style="float:left;margin-right:10px;"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/tweet_button.html" style="width:110px; height:20px;"></iframe></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://blog.buildinginternetofthings.com/category/iot/" rel="category tag">Internet of Things</a> by <a href="http://blog.buildinginternetofthings.com/author/admin/">Charalampos</a>. Bookmark the <a href="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things.html" title="Permalink to Using Amazon Echo (Alexa) as an Interface for the IoT" rel="bookmark">permalink</a>.		
+		
+	</footer><!-- .entry-meta -->
+</article><!-- #post-1142 -->
+
+        
+
+						<div id="comments">
+	
+	
+			<h2 id="comments-title">
+			One thought on “<span>Using Amazon Echo (Alexa) as an Interface for the IoT</span>”		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-248418">
+		<article id="comment-248418" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/bffc1f0c6f0c34ba847789e9aaa924b5" srcset="http://2.gravatar.com/avatar/bffc1f0c6f0c34ba847789e9aaa924b5?s=136&amp;d=mm&amp;r=g 2x" class="avatar avatar-68 photo" height="68" width="68"><span class="fn">Mihai Galos</span> on <a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#comment-248418"><time pubdate="" datetime="2015-11-01T20:01:28+00:00">November 1, 2015 at 8:01 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Excellent article! I am trying to do the same by connecting my Netatmo weatherstation to a Lambda function and then Alexa to that lambda. Unfortunately, still having some problems on the Ajax async request…</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/?replytocom=248418#respond" onclick="return addComment.moveForm( &quot;comment-248418&quot;, &quot;248418&quot;, &quot;respond&quot;, &quot;1142&quot; )" aria-label="Reply to Mihai Galos">Reply <span>↓</span></a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://blog.buildinginternetofthings.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" value="Mihai Galos" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" value="mihaigalos@yahoo.com" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required="required"></textarea></p>						
+						<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="1142" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e639e11bfa"></p><p style="display: none;"></p>					<input type="hidden" id="ak_js" name="ak_js" value="1447605076200"></form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments -->
+
+				
+		</div><!-- #content -->
+        
+		            
+	</div><!-- #primary -->
+    
+	    
+
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="archives-4" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href="http://blog.buildinginternetofthings.com/2015/07/">July 2015</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2015/06/">June 2015</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2015/03/">March 2015</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2015/01/">January 2015</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2014/12/">December 2014</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2014/06/">June 2014</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2014/04/">April 2014</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2014/03/">March 2014</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2014/01/">January 2014</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/12/">December 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/11/">November 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/10/">October 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/09/">September 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/05/">May 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/04/">April 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/02/">February 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2013/01/">January 2013</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/12/">December 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/11/">November 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/10/">October 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/09/">September 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/07/">July 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/06/">June 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/05/">May 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/04/">April 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/03/">March 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/02/">February 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2012/01/">January 2012</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2011/12/">December 2011</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2011/11/">November 2011</a></li>
+	<li><a href="http://blog.buildinginternetofthings.com/2011/10/">October 2011</a></li>
+		</ul>
+</aside><aside id="linkcat-2" class="widget widget_links"><h3 class="widget-title">Blogroll</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+<li><a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a></li>
+<li><a href="http://wordpress.org/support/">Support Forum</a></li>
+<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+<li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-3" class="widget widget_links"><h3 class="widget-title">Links</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.arduino.cc/" target="_blank">Arduino</a></li>
+<li><a href="http://www.buildinginternetofthings.com/">Building Internet of Things with the Arduino</a></li>
+<li><a href="http://www.eeweb.com/">EEWeb</a></li>
+<li><a href="http://www.openpicus.com/">Flyport – openPicus</a></li>
+<li><a href="http://www.postscapes.com/">Postscapes – Tracking the Internet of Things</a></li>
+
+	</ul>
+</aside>
+		</div><!-- #secondary .widget-area -->
+
+
+	</div><!-- #main -->
+
+	      
+
+	<footer id="colophon" role="contentinfo">
+		
+        
+        <div id="site-generator" class="clearfix">
+        
+            <div class="copyright">Copyright © 2015 <a href="http://blog.buildinginternetofthings.com/" title="Building Internet of Things"><span>Building Internet of Things</span></a>. All Rights Reserved.</div><div class="powered"><span class="theme-name">Theme: Catch Box by </span><span class="theme-author"><a href="http://catchthemes.com/" target="_blank" title="Catch Themes">Catch Themes</a></span></div> 
+            
+        </div> <!-- #site-generator -->
+        
+	</footer><!-- #colophon -->
+    
+</div><!-- #page -->
+
+<a href="http://blog.buildinginternetofthings.com/2015/06/25/using-amazon-echo-alexa-as-an-interface-for-the-iot/#branding" id="scrollup" style="display: none;"></a>
+
+<script src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/plusone.js" gapi_processed="true">{lang: "en-US"}</script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/shCore.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/shBrushPhp.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/form.js"></script>
+<script type="text/javascript">//<![CDATA[
+SyntaxHighlighter.all();
+//]]></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/blog.buildinginternetofthings.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/polls-js.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/catchbox-menu.min.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Using Amazon Echo (Alexa) as an Interface for the IoT _ Building Internet of Things_files/catchbox-scrollup.min.js"></script>
+
+
+<div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="ImTranslatorLogo" style="display: none; background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png);"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator"><div id="SL_planshet" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png) rgb(244, 245, 245);"><div id="SL_TB"><div id="bubblelogo" class="ImTranslatorLogo" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png);"></div><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SLloc" type="checkbox" title="Sprache sichern"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from"><option value="auto">Sprache erkennen</option><option value="af">Afrikaans</option><option value="sq">Albanisch</option><option value="ar">Arabisch</option><option value="hy">Armenisch</option><option value="az">Aserbaidschanisch</option><option value="eu">Baskisch</option><option value="bn">Bengalisch</option><option value="bs">Bosnisch</option><option value="bg">Bulgarisch</option><option value="my">Burmesisch</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinesisch (trad)</option><option value="zh-TW">Chinesisch (ver)</option><option value="da">Dänisch</option><option value="de">Deutsch</option><option value="en">Englisch</option><option value="eo">Esperanto</option><option value="et">Estnisch</option><option value="fi">Finnisch</option><option value="fr">Französisch</option><option value="gl">Galizisch</option><option value="ka">Georgisch</option><option value="el">Griechisch</option><option value="gu">Gujarati</option><option value="ht">Haitianisch</option><option value="ha">Hausa</option><option value="iw">Hebräisch</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="ig">Igbo</option><option value="id">Indonesisch</option><option value="ga">Irisch</option><option value="is">Isländisch</option><option value="it">Italienisch</option><option value="ja">Japanisch</option><option value="jw">Javanesisch</option><option value="yi">Jiddisch</option><option value="kn">Kannada</option><option value="kk">Kasachisch</option><option value="ca">Katalanisch</option><option value="km">Khmer</option><option value="ko">Koreanisch</option><option value="hr">Kroatisch</option><option value="lo">Lao</option><option value="la">Lateinish</option><option value="lv">Lettisch</option><option value="lt">Litauisch</option><option value="ml">Malabarisch</option><option value="mg">Malagasy</option><option value="ms">Malaysisch</option><option value="mt">Maltesisch</option><option value="mi">Maori</option><option value="mr">Marathisch</option><option value="mk">Mazedonisch</option><option value="mn">Mongolisch</option><option value="ne">Nepalesisch</option><option value="nl">Niederländisch</option><option value="no">Norwegisch</option><option value="fa">Persisch</option><option value="pl">Polnisch</option><option value="pt">Portugiesisch</option><option value="pa">Punjabi</option><option value="ro">Rumänisch</option><option value="ru">Russisch</option><option value="sv">Schwedisch</option><option value="sr">Serbisch</option><option value="st">Sesotho</option><option value="si">Singhalesisch</option><option value="sk">Slowakisch</option><option value="sl">Slowenisch</option><option value="so">Somali</option><option value="es">Spanisch</option><option value="sw">Suaheli</option><option value="su">Sundanesisch</option><option value="tg">Tadschikisch</option><option value="tl">Tagalog</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thailändisch</option><option value="cs">Tschechisch</option><option value="tr">Türkisch</option><option value="uk">Ukrainisch</option><option value="hu">Ungarisch</option><option value="ur">Urdu</option><option value="uz">Uzbekisch</option><option value="vi">Vietnamesisch</option><option value="cy">Walisisch</option><option value="be">Weißrussisch</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Sprachen umschalten" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/switchb.png);"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to"><option value="af">Afrikaans</option><option value="sq">Albanisch</option><option value="ar">Arabisch</option><option value="hy">Armenisch</option><option value="az">Aserbaidschanisch</option><option value="eu">Baskisch</option><option value="bn">Bengalisch</option><option value="bs">Bosnisch</option><option value="bg">Bulgarisch</option><option value="my">Burmesisch</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinesisch (trad)</option><option value="zh-TW">Chinesisch (ver)</option><option value="da">Dänisch</option><option value="de">Deutsch</option><option value="en">Englisch</option><option value="eo">Esperanto</option><option value="et">Estnisch</option><option value="fi">Finnisch</option><option value="fr">Französisch</option><option value="gl">Galizisch</option><option value="ka">Georgisch</option><option value="el">Griechisch</option><option value="gu">Gujarati</option><option value="ht">Haitianisch</option><option value="ha">Hausa</option><option value="iw">Hebräisch</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="ig">Igbo</option><option value="id">Indonesisch</option><option value="ga">Irisch</option><option value="is">Isländisch</option><option value="it">Italienisch</option><option value="ja">Japanisch</option><option value="jw">Javanesisch</option><option value="yi">Jiddisch</option><option value="kn">Kannada</option><option value="kk">Kasachisch</option><option value="ca">Katalanisch</option><option value="km">Khmer</option><option value="ko">Koreanisch</option><option value="hr">Kroatisch</option><option value="lo">Lao</option><option value="la">Lateinish</option><option value="lv">Lettisch</option><option value="lt">Litauisch</option><option value="ml">Malabarisch</option><option value="mg">Malagasy</option><option value="ms">Malaysisch</option><option value="mt">Maltesisch</option><option value="mi">Maori</option><option value="mr">Marathisch</option><option value="mk">Mazedonisch</option><option value="mn">Mongolisch</option><option value="ne">Nepalesisch</option><option value="nl">Niederländisch</option><option value="no">Norwegisch</option><option value="fa">Persisch</option><option value="pl">Polnisch</option><option value="pt">Portugiesisch</option><option value="pa">Punjabi</option><option value="ro">Rumänisch</option><option value="ru">Russisch</option><option value="sv">Schwedisch</option><option value="sr">Serbisch</option><option value="st">Sesotho</option><option value="si">Singhalesisch</option><option value="sk">Slowakisch</option><option value="sl">Slowenisch</option><option value="so">Somali</option><option selected="selected" value="es">Spanisch</option><option value="sw">Suaheli</option><option value="su">Sundanesisch</option><option value="tg">Tadschikisch</option><option value="tl">Tagalog</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thailändisch</option><option value="cs">Tschechisch</option><option value="tr">Türkisch</option><option value="uk">Ukrainisch</option><option value="hu">Ungarisch</option><option value="ur">Urdu</option><option value="uz">Uzbekisch</option><option value="vi">Vietnamesisch</option><option value="cy">Walisisch</option><option value="be">Weißrussisch</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="5%" align="center"> </td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Zuhören" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/tts-voice.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Kopieren" class="SL_copy" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/copy_hand.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch" onclick="alert(chrome.i18n.getMessage(&#39;extNot_available&#39;))"></div><div id="SL_bbl_font" title="Schriftgröße" class="SL_bbl_font" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/font-off.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_TH" title="Übersetzungsverlauf" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/history.png);"></div></td><td class="SL_td" width="18%"></td><td class="SL_td" width="8%" align="right"><div id="SL_pin" title="Pop-up-Übersetzer nageln" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/pin-on.png);"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg.png) rgb(255, 255, 255);"></div><div id="SL_player2"></div><div id="SL_alert100" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png);">Die Sound-Funktion ist auf 100 Zeichen begrenzt</div><div id="SL_bbl_donate" title="Beitrag leisten" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/donate2.png);"></div><div id="SL_Balloon_options" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg3.png) rgb(255, 255, 255);"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options-bbl.html" target="_blank" class="SL_options" title="Optionen anzeigen">Optionen</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/history.html" target="_blank" class="SL_options" title="Übersetzungsverlauf">Geschichte</a> : <a href="http://about.imtranslator.net/tutorials/presentations/imtranslator-for-chrome/chrome-bubble-translator/" target="_blank" class="SL_options" title="ImTranslator Hilfe">Hilfe</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/feedback.html" target="_blank" class="SL_options" title="Rückkoppelung">Rückkopplung</a><span id="SL_Balloon_Close" title="Schließen">Schließen</span></div></div></div></body></html>

@@ -1,0 +1,1 @@
+Vout = 2.5 Volt + 100mV / A [Volt]

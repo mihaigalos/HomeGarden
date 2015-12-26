@@ -1,0 +1,54 @@
+{
+"intents": 
+	[
+		{
+			"intent": "DoActionIntent",
+			"slots": [
+					{
+					"name": "Action",
+					"type": "LIST_OF_ACTIONS"
+					}
+			]
+		},
+      
+        {
+        	"intent": "AskTempIntent",
+        	"slots": []
+        },
+      
+        {
+        	"intent": "AskLightIntent",
+        	"slots": [
+                        {
+                          "name": "LightAt",
+                          "type": "LIST_OF_PLANTS"
+                        }
+                    ]
+        },
+      
+        {
+        	"intent": "AskWaterIntent",
+        	"slots": [
+                        {
+                          "name": "WaterAt",
+                          "type": "LIST_OF_PLANTS"
+                        }
+                    ]
+        },
+      
+        {
+        	"intent": "AskErrorCount",
+        	"slots": []
+        },
+      
+        {
+        	"intent": "AskErrorList",
+        	"slots": []
+        },
+      
+        {
+        	"intent": "AskErrorReset",
+        	"slots": []
+        }
+	]
+}
