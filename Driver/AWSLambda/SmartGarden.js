@@ -12,8 +12,8 @@
  */
 
 var http = require('https');
-var deviceID = "240044000e47343432313031";
-var particleToken = "d3d2f295f9fbb706cabcac98bb626fc6293ebed8";
+var deviceID = "240044000e473434323130";
+var particleToken = "d3d2f295f9fbb706cabcx1ac98bb626fc6293ebed8";
  
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
