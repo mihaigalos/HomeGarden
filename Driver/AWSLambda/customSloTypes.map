@@ -1,1 +1,3 @@
-LIST_OF_ACTIONS	water garden | start watering | finish watering | stop watering
+LIST_OF_ACTIONS	water garden | start watering | finish watering | stop watering | get status of fruity | get fruity's battery | get help | stop
+
+LIST_OF_PLANTS	tulips left | tulips right | winter plants | tomatoes | vegetables | basil | flowers left | flowers right | flowers front | flowers front left | flowers front right | flowers back| flowers back left | flowers back right

@@ -1,7 +1,14 @@
-#define MEASURE_EVERY_X_SECONDS 15
+#define MEASURE_EVERY_X_SECONDS 60
+#define ALIVE_X_SECONDS 10
+#define AVG_COUNT 30
+
+#include <vector>
+
+
 
 uint32_t lastMeasureTime; 
 uint32_t lastWaterStartTime;
+uint32_t lastAlive;
 
 uint32_t waterTime;
 
@@ -9,6 +16,10 @@ int8_t errorCode;
 uint16_t light, humidity, temperature;
 
 String lastWateredT, nextWateringT, status;
+
+uint32_t iteration;
+
+std::vector<uint16_t> v_hum(AVG_COUNT);
 
 void writeI2CRegister8bit(int addr, int value) {
   Wire.beginTransmission(addr);
@@ -22,7 +33,8 @@ unsigned int readI2CRegister16bit(int addr, int reg) {
   delay(100);
   Wire.write(reg);
   delay(100);
- 
+  
+ Wire.endTransmission();
   
   
    unsigned int t  = 0;
@@ -31,7 +43,7 @@ unsigned int readI2CRegister16bit(int addr, int reg) {
   t = Wire.read() << 8;
   t = t | Wire.read();
   
-   Wire.endTransmission();
+   
   
   return t;
 }
@@ -51,7 +63,10 @@ void setup() {
     errorCode = 0;
     lastWateredT = "-"; nextWateringT = "-"; status = "ok";
     waterTime = 0;
+    lastAlive = 0;
     //lastMeasureTime =  millis();
+    lastMeasureTime = 0;
+    iteration = 0;
 }
 String toString(int num){
 	String result;
@@ -85,10 +100,10 @@ int extSet(String command)
     int result = -1;
     
     
-    if (0 == command.compareTo("waterOn10s")){
+    if (0 == command.compareTo("waterOn15s")){
          result = 0;
         digitalWrite(D5, LOW);
-        waterTime = 10; // seconds
+        waterTime = 15; // seconds
         lastWaterStartTime = millis();
     }
     else if (0 == command.compareTo("waterOn")){
@@ -102,15 +117,29 @@ int extSet(String command)
     return result;
 }
 
-
+uint16_t getAverageHumidity(){
+    
+    uint16_t result = 0;
+    for(uint16_t i = 0; i<v_hum.size();i++){
+        result += v_hum[i] ;
+    }
+    result /=v_hum.size();
+    
+    return result;
+}
 
 
 void loop() {
 
 
-    if(millis() - lastWaterStartTime > waterTime*1000){
-        digitalWrite(D5, HIGH);
+
+    if(millis() - lastAlive > ALIVE_X_SECONDS*1000){
+        //Spark.publish("LadybugAlive");
+        lastAlive = millis();
     }
+
+
+     
 
     if (millis() - lastMeasureTime > MEASURE_EVERY_X_SECONDS*1000) {
         
@@ -118,9 +147,22 @@ void loop() {
         digitalWrite(D2, HIGH); // supply board with current
         delay(100); // startup
        char data[50]="";
-        String measure = "Humidity: sensor not connected";
-     /*   humidity = readI2CRegister16bit(0x20, 0); //read capacitance register
+        String measure;
+        
+        measure+="Avg. Humidity: ";
+        if(AVG_COUNT <= ++iteration) { // have at least AVG_Count number of samples in the ring buffer. cannot use size because capacity already reserved when delcared.
+	       sprintf(data, "%d", getAverageHumidity());
+	       measure+=data;
+	    } else {
+	       measure+="-"; 
+	    }
+        measure+="   ";
+        measure+="Humidity: " ;
+        humidity = readI2CRegister16bit(0x20, 0); //read capacitance register
          sprintf(data, "%d", humidity); measure+=data+String("   Temperature: ");
+         
+         v_hum[iteration % AVG_COUNT] = humidity;
+         
         temperature = readI2CRegister16bit(0x20, 5); //temperature register
         sprintf(data, "%d", temperature); measure+=data+String("   Light: ");
         writeI2CRegister8bit(0x20, 3); //request light measurement 
@@ -129,13 +171,13 @@ void loop() {
         sprintf(data, "%d", light); measure+=data+String(".");
         
        
-        digitalWrite(D2, LOW);*/
+        digitalWrite(D2, LOW);
       
        
-        Spark.publish("Measurements",measure);
-        Spark.publish("gardenNotification", buildPublishJsonData());
-		
+        Spark.publish("LadybugReport",measure);
+        //Spark.publish("gardenNotification", buildPublishJsonData());
+	    
+	    	
 	
-		
     }
 }

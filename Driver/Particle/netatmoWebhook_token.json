@@ -1,0 +1,19 @@
+{
+  "eventName": "getNetatmoToken",
+  "url": "https://api.netatmo.net/oauth2/token",
+  "requestType": "POST",
+  "headers": {
+	"Content-Type": "application/x-www-form-urlencoded"
+  },
+  
+	"form":
+	{ 
+	"grant_type" 	: "password",
+	"client_id"		: "<Insert your client Id here>",
+	"client_secret"	: "<Insert your client secret here>",
+	"username" 		: "<Insert your username here>",
+	"password" 		: "<Insert your password here>",
+	"scope"			: "read_station"
+	},
+   "mydevices": false
+}
