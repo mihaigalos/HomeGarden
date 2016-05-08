@@ -1,0 +1,13 @@
+{
+  "eventName": "getNetatmoMeasurements",
+  "url": "https://api.netatmo.net/api/devicelist",
+  "requestType": "POST",
+  "headers": {
+	"Content-Type": "application/x-www-form-urlencoded"
+  },
+	"form":
+	{ 
+	"access_token" 	: "{{token}}"
+	},
+   "mydevices": false
+}

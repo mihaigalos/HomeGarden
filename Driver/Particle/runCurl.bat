@@ -1,0 +1,1 @@
+curl -sS -H "Authorization: Bearer <your bearer here>" https://api.spark.io/v1/devices/<your device>/events 
