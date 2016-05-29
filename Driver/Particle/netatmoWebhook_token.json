@@ -9,10 +9,10 @@
 	"form":
 	{ 
 	"grant_type" 	: "password",
-	"client_id"		: "567e675769f74046bea1ea4c",
-	"client_secret"	: "VVDROQ4rRc7AEllfyO2XvuQaIkEz",
-	"username" 		: "mihaigalos@yahoo.com",
-	"password" 		: "mihaiNetatmo12",
+	"client_id"		: "",
+	"client_secret"	: "",
+	"username" 		: "",
+	"password" 		: "",
 	"scope"			: "read_station"
 	},
    "mydevices": false
